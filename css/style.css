@@ -99,12 +99,6 @@ section.home {
   transition: all 0.3s ease-in;
 }
 
-.toggle.active {
-  background-image: url(../images/close.png);
-  background-size: 25px;
-  transition: all 0.3s ease-in;
-}
-
 /* NAVIGATION */
 .navigation {
   position: absolute;
@@ -112,10 +106,6 @@ section.home {
   right: 0;
   padding: 20px 25% 0 0;
   z-index: 4;
-}
-
-.navigation.active {
-  left: 0;
 }
 
 .navigation ul {
@@ -378,16 +368,26 @@ p {
     display: inline;
   }
 
+  .toggle.active {
+    background-image: url(../images/close.png);
+    background-size: 25px;
+    transition: all 0.3s ease-in;
+  }
+
   .navigation {
     position: fixed;
-    top: 0;
     left: 100%;
+    padding: 0;
     height: 100%;
     width: 100%;
     background: white;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .navigation.active {
+    left: 0;
   }
 
   .navigation ul {
